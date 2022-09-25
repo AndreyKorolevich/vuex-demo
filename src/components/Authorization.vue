@@ -12,14 +12,14 @@ export default {
   props: ['title'],
   methods: {
     login() {
-      this.$store.commit('logIn')
+      this.$store.commit('authorizationModule/logIn')
     },
     logout() {
-      this.$store.commit('logOut')
+      this.$store.commit('authorizationModule/logOut')
     }
   },
   computed: {
-    ...mapGetters(['isLogin'])
+    ...mapGetters('authorizationModule', ['isLogin'])
   }
 };
 </script>
